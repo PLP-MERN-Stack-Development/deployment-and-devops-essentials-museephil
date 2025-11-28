@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: musee-backend
+    env: node
+    region: frankfurt
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    plan: free
+    envVars:
+      - key: MONGODB_URI
+        fromSecret: MONGODB_URI
